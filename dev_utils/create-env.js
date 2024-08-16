@@ -3,10 +3,10 @@ const fs = require('fs');
 const envContent = `
 API_KEY=
 PORT=
-DB_Name=
-DB_Password=
+DB_NAME=
+DB_USER=
+DB_PASS=
 DB_PORT=
-DB_User=
 `;
 
 fs.writeFile('./.env', envContent.trim(), (err) => {

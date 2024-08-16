@@ -1,10 +1,10 @@
 // config.js
-require('dotenv').config();
+require('dotenv').config(); // Load environment variables from .env file
 
 const config = {
-    port: process.env.PORT,
-    openaiApiKey: process.env.API_KEY,
-    // You can add more configurations here if needed
-  };
-  
-  module.exports = config;
+  apiKey: process.env.API_KEY,
+  model: process.env.MODEL,
+  port:process.env.PORT
+};
+
+module.exports = config;
