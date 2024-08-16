@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "create-env": "node create-env.js",
+    "create-env": "node ./dev_utils/create-env.js",
     "postinstall": "npm run create-env",
     "test": "mocha '*.test.mjs'"
   },
