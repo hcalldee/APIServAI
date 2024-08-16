@@ -1,47 +1,37 @@
-markdown
+# ICDServAI
 
-Copy code
+API service ini menyediakan akses ke referensi kode ICD-10 dengan memanfaatkan kemampuan kecerdasan buatan dari Gemini AI. Program ini dirancang untuk memudahkan integrasi kode ICD-10 ke dalam aplikasi kesehatan atau sistem informasi medis, dengan memberikan pencarian dan informasi detail tentang kode ICD-10 secara real-time. Melalui API ini, pengguna dapat melakukan pencarian berdasarkan nama penyakit, kode ICD-10, atau kriteria lainnya, dan mendapatkan data yang relevan untuk kebutuhan diagnostik dan administratif.
 
-# Proses Instalasi Berikut adalah langkah-langkah untuk menginstal aplikasi ini: ## Prerequisites Sebelum memulai proses instalasi, pastikan Anda telah memenuhi persyaratan berikut: - [Node.js](https://nodejs.org/) versi 16.x atau yang lebih baru - [npm](https://www.npmjs.com/) versi 8.x atau yang lebih baru ## Langkah-langkah Instalasi 1. **Clone Repository** Clone repository dari GitHub menggunakan perintah berikut: ```bash git clone https://github.com/username/repository.git cd repository
+## Fitur
 
-Install Dependencies
+- Fitur 1: Cari Referensi ICD dan Tarif INACBG dari AI.
+- Fitur 2: Otomatis Update ICD Px sesuai Referensi AI.
 
-Install semua dependensi yang diperlukan dengan npm:
+## Instalasi
 
-bash
+Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini:
 
-Copy code
-
-npm install
-
-Konfigurasi
-
-Buat file konfigurasi dengan menyalin file template konfigurasi dan mengedit sesuai kebutuhan Anda:
-
-bash
-
-Copy code
-
-cp .env.example .env
-
-Edit file .env untuk mengisi variabel lingkungan yang diperlukan.
-
-Menjalankan Aplikasi
-
-Setelah semua dependensi terinstal dan konfigurasi selesai, Anda dapat menjalankan aplikasi dengan perintah:
-
-bash
-
-Copy code
-
-npm start
-
-Menjalankan Unit Test
-
-Untuk menjalankan unit test dan memastikan semuanya berjalan dengan baik, gunakan perintah:
-
-bash
-
-Copy code
-
-npm test
+1. Clone repositori ini:
+   ```bash
+   git clone https://github.com/hcalldee/APIServAI.git
+   bash cd APIServAI
+2. Install Dependency Dan Env
+   ```bash
+     npm install
+3. Isi .env sesuai dengan env yang anda gunakan
+   ```bash
+    API_KEY= //api-key-gemini
+    PORT= //port DB
+    DB_NAME=
+    DB_USER=
+    DB_PASS=
+    DB_PORT=
+    MODEL= // model ai gemini
+4. katalog api
+   <br>limit: 30 words
+   ```bash
+     curl -X POST http://localhost:PORT/generate-text \
+     -H "Content-Type: application/json" \
+     -d '{
+           "prompt": "tes ai"
+         }'
