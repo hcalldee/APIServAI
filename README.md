@@ -5,7 +5,7 @@ API service ini menyediakan akses ke referensi kode ICD-10 dengan memanfaatkan k
 ## Fitur
 
 - Fitur 1: Cari Referensi ICD dan Tarif INACBG dari AI.
-- Fitur 2: Otomatis Update ICD Px sesuai Referensi AI.
+- Fitur 2: Otomatis Update ICD Px ke Local Database (MLITE & Khanza Based) sesuai Referensi AI.
 
 ## Instalasi
 
