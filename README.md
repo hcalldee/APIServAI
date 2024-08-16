@@ -31,7 +31,7 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini:
 4. katalog api
    <br>cari referensi icd limit: 50 kata
    ```bash
-     curl -X POST http://localhost:PORT/generate-text \
+     curl -X POST http://localhost:PORT/api/generate-text \
      -H "Content-Type: application/json" \
      -d '{
            "prompt": "tes ai"
