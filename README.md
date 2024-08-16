@@ -29,7 +29,7 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini:
     DB_PORT= //port DB
     MODEL= // model ai gemini
 4. katalog api
-   <br>limit: 30 words
+   <br>cari referensi icd limit: 50 kata
    ```bash
      curl -X POST http://localhost:PORT/generate-text \
      -H "Content-Type: application/json" \
