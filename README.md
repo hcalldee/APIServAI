@@ -21,11 +21,12 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini:
 3. Isi .env sesuai dengan env yang anda gunakan
    ```bash
     API_KEY= //api-key-gemini
-    PORT= //port DB
-    DB_NAME=
-    DB_USER=
-    DB_PASS=
-    DB_PORT=
+    PORT= //port API
+    DB_HOST= //DB name
+    DB_NAME= //DB name
+    DB_USER= //DB user
+    DB_PASS= //DB pass
+    DB_PORT= //port DB
     MODEL= // model ai gemini
 4. katalog api
    <br>limit: 30 words
