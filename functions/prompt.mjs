@@ -11,10 +11,11 @@ export default class Promp {
       // Append additional instructions to the prompt
       const additionalInstructions = `
         buatkan referensi ICD-10 yang paling relevan. 
-        kemudian buat prakiraan tarif inacbgs untuk rumah sakit tipe c 
+        kemudian buat prakiraan tarif inacbgs pasien rawat jalan untuk rumah sakit tipe c 
         di daerah kalimantan selatan, kab banjar. 
         return only icd-10 serta deskripsi pendek dan hanya prakiraan tarif dalam rupiah, 
-        return dalam 100 kata saja`;
+        return dalam 100 kata saja. {{Return dalam bentuk table html beri class html khusus 
+        "ICD-items" untuk data kode ICD, bagian prakiraan tarif dalam tag paragraf html dengan id "panel-body-content"}}`;
 
       // Check if the initial prompt is less than 50 words
       const wordCount = prompt.split(' ').length;

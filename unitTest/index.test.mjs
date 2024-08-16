@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import sinon from 'sinon';
-import Prompt from './prompt.mjs';
+import Prompt from '../functions/prompt.mjs';
 
 describe('Prompt', function () {
   let prompt;

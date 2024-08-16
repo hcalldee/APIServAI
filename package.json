@@ -5,7 +5,7 @@
   "scripts": {
     "create-env": "node ./dev_utils/create-env.js",
     "postinstall": "npm run create-env",
-    "test": "mocha '*.test.mjs'"
+    "test": "mocha './unitTest/*.test.mjs'"
   },
   "keywords": [],
   "author": "",
