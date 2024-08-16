@@ -3,6 +3,7 @@ const fs = require('fs');
 const envContent = `
 API_KEY=
 PORT=
+DB_HOST=
 DB_NAME=
 DB_USER=
 DB_PASS=
