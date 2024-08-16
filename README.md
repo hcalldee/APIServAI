@@ -1,18 +1,47 @@
-# API Service Documentation
+markdown
 
-## Deskripsi
+Copy code
 
-API Service ini dibangun menggunakan Express dan Node.js. Dokumentasi ini mencakup langkah-langkah untuk instalasi, konfigurasi, dan menjalankan API service, serta detail tentang endpoint yang tersedia.
+# Proses Instalasi Berikut adalah langkah-langkah untuk menginstal aplikasi ini: ## Prerequisites Sebelum memulai proses instalasi, pastikan Anda telah memenuhi persyaratan berikut: - [Node.js](https://nodejs.org/) versi 16.x atau yang lebih baru - [npm](https://www.npmjs.com/) versi 8.x atau yang lebih baru ## Langkah-langkah Instalasi 1. **Clone Repository** Clone repository dari GitHub menggunakan perintah berikut: ```bash git clone https://github.com/username/repository.git cd repository
 
-## Prerequisites
+Install Dependencies
 
-Sebelum memulai, pastikan Anda memiliki Node.js dan npm terinstal di mesin Anda. Anda dapat mengunduh dan menginstal Node.js dari [situs web Node.js](https://nodejs.org/).
+Install semua dependensi yang diperlukan dengan npm:
 
-## Instalasi
+bash
 
-1. **Clone Repositori**
+Copy code
 
-   Clone repositori ini ke mesin lokal Anda:
-   ```bash
-   git clone <URL_REPOSITORI>
-   cd <NAMA_FOLDER_REPOSITORI>
+npm install
+
+Konfigurasi
+
+Buat file konfigurasi dengan menyalin file template konfigurasi dan mengedit sesuai kebutuhan Anda:
+
+bash
+
+Copy code
+
+cp .env.example .env
+
+Edit file .env untuk mengisi variabel lingkungan yang diperlukan.
+
+Menjalankan Aplikasi
+
+Setelah semua dependensi terinstal dan konfigurasi selesai, Anda dapat menjalankan aplikasi dengan perintah:
+
+bash
+
+Copy code
+
+npm start
+
+Menjalankan Unit Test
+
+Untuk menjalankan unit test dan memastikan semuanya berjalan dengan baik, gunakan perintah:
+
+bash
+
+Copy code
+
+npm test
