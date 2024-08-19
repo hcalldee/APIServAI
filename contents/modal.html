@@ -4,9 +4,7 @@
       <!-- Generated text -->
       ${text}
     </div>
-    <!-- <button class="btn btn-primary" id="simpan-icd">Simpan ICD 10</button> -->
   </div>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
   <script>
     $('#table-wrapper-generator').on('click','.simpan_icd',(function () {
       let url    = 'http://localhost:3000/api/SimpanICD';
@@ -14,11 +12,12 @@
         kode_icd : $(this).attr('data-icd'),
         no_rawat : $(this).attr('data-nr')
       }
+      $(this).attr('disabled',true)
       $.post(url, data_form,function(data) {
-        if (!data.success) {
-         alert(data.message); // Show the error message from the server
-        } else {
+        if (data.success) {
           alert('Data inserted successfully');
+        } else {
+          alert(data.message); // Show the error message from the server
         }
       });
     }))
