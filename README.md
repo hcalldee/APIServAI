@@ -20,14 +20,15 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini:
      npm install
 3. Isi .env sesuai dengan env yang anda gunakan
    ```bash
-    API_KEY= //api-key-gemini
-    PORT= //port API
-    DB_HOST= //DB name
-    DB_NAME= //DB name
-    DB_USER= //DB user
-    DB_PASS= //DB pass
-    DB_PORT= //port DB
-    MODEL= // model ai gemini
+      API_KEY= //api-key-gemini
+      PORT= //port API
+      DB_HOST= //DB host
+      DB_NAME= //DB name
+      DB_USER= //DB user
+      DB_PASS= //DB pass
+      DB_PORT= //port DB
+      DB_CONNECTION_LIMIT= // limit connection db on ms
+      MODEL= // model ai gemini
 4. katalog api
    <br>cari referensi icd limit: 50 kata
    ```bash
