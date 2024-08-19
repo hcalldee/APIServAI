@@ -36,3 +36,13 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini:
      -d '{
            "prompt": "tes ai"
          }'
+   ```
+   <br>simpan ICD ke database SIMRS
+   ```bash
+      curl -X POST http://localhost:PORT/api/SimpanICD \
+     -H "Content-Type: application/json" \
+     -d '{
+           "kode_icd": "your_icd_value",
+           "no_rawat": "your_nr_value"
+         }'
+   ```
