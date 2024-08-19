@@ -1,43 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Generated Text</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    body { padding: 15px; }
-    #panel-body-content {
-      white-space: pre-line; /* Preserve line breaks */
-    }
-  </style>
-</head>
-<body>
-  
   <div class="card card-body mt-1">
-    <h4>Hasil Referensi AI</h4>
-    <div id="panel-body-content">
+    <h4>Hasil Referensi Gemini AI</h4>
+    <div id="table-wrapper-generator">
       <!-- Generated text -->
       ${text}
     </div>
-    <button class="btn btn-primary" id="simpan-icd">Simpan ICD 10</button>
+    <!-- <button class="btn btn-primary" id="simpan-icd">Simpan ICD 10</button> -->
   </div>
-
-  <!-- Bootstrap JS and dependencies -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
   <script>
-    $('#simpan-icd').click(function () {
-      let url    = 'http://localhost:3000/api/SimpanICD?t=' + mlite.token;
+    $('#table-wrapper-generator').on('click','.simpan_icd',(function () {
+      let url    = 'http://localhost:3000/api/SimpanICD';
       let data_form = {
-        
+        kode_icd : $(this).attr('data-icd'),
+        no_rawat : $(this).attr('data-nr')
       }
       $.post(url, data_form,function(data) {
-      
-      
+        if (!data.success) {
+         alert(data.message); // Show the error message from the server
+        } else {
+          alert('Data inserted successfully');
+        }
       });
-    })
+    }))
   </script>
-</body>
-</html>

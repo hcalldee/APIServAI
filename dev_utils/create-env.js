@@ -6,8 +6,10 @@ PORT=
 DB_HOST=
 DB_NAME=
 DB_USER=
-DB_PASS=
+DB_PASS
 DB_PORT=
+DB_CONNECTION_LIMIT=
+MODEL=
 `;
 
 fs.writeFile('./.env', envContent.trim(), (err) => {

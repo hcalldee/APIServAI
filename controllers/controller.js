@@ -3,6 +3,7 @@ let promp;
 const config = require('../config');
 const path = require('path');
 const { renderTemplateWithText } = require('../functions/template')
+const { insertDiagnosaPasien,checkRecordExists } = require('../functions/database');
 
 const loadModules = async () => {
   const { default: Promp } = await import('../functions/prompt.mjs');
@@ -32,6 +33,25 @@ const generateText = async (req, res) => {
   }
 };
 
+
+const simpanICD = async (req, res) => {
+  const { no_rawat, kode_icd } = req.body;
+
+  try {
+    const exists = await checkRecordExists(no_rawat, kode_icd);
+    if (exists) {
+      return res.status(400).json({ success: false, message: 'Record already exists' });
+    }
+
+    await insertDiagnosaPasien(no_rawat, kode_icd);
+    res.json({ success: true, message: 'Data inserted successfully' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ success: false, message: 'Error processing request' });
+  }
+};
+
 module.exports = {
   generateText,
+  simpanICD
 };
