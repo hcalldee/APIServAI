@@ -24,7 +24,7 @@ const generateText = async (req, res) => {
         generatedText = generatedText.replace(/##/g, '<br>');
         // Render the template with the generated text
         const htmlContent = renderTemplateWithText(templatePath, generatedText);
-    
+      
         // Send the modified HTML content as the response
         res.send(htmlContent);
   } catch (error) {
